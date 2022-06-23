@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.example.Results
+import com.template.apimovies.data.Results
 import com.template.apimovies.R
 import com.template.apimovies.utils.MyDiffUtil
 

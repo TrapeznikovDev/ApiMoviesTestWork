@@ -6,7 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.example.Results
+import com.template.apimovies.data.Results
 import com.template.apimovies.R
 
 class RecyclerViewHolder(view: View, val context: Context): RecyclerView.ViewHolder(view) {

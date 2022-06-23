@@ -1,7 +1,7 @@
 package com.template.apimovies.di
 
 import android.content.Context
-import com.example.newkrepysh.di.retrofit.Api
+import com.template.apimovies.di.retrofit.Api
 import com.template.apimovies.MainApplication
 import dagger.Component
 import javax.inject.Singleton

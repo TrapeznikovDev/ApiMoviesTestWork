@@ -2,8 +2,7 @@ package com.template.apimovies.di
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.util.Log
-import com.example.newkrepysh.di.retrofit.Api
+import com.template.apimovies.di.retrofit.Api
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -16,7 +15,6 @@ import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.lang.Exception
 import java.security.cert.X509Certificate
 import javax.inject.Singleton
 import javax.net.ssl.SSLContext

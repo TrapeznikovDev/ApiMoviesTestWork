@@ -1,7 +1,7 @@
 package com.template.apimovies.utils
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.example.Results
+import com.template.apimovies.data.Results
 
 class MyDiffUtil(
     private var oldList: List<Results?>,

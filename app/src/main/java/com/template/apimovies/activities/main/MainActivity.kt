@@ -1,13 +1,11 @@
 package com.template.apimovies.activities.main
 
-import androidx.appcompat.app.AppCompatActivity
-
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.template.apimovies.ComponentManager
-import com.template.apimovies.R
 import com.template.apimovies.databinding.ActivityMainBinding
 import com.template.apimovies.di.ViewModelFactory
 import javax.inject.Inject
