@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
         }
         model.mData.observe(this){
             it?.let {adapter.setData(it)
-                adapter.setData(it)
             }
         }
     }
