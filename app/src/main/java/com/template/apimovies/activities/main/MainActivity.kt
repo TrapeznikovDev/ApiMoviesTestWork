@@ -29,10 +29,16 @@ class MainActivity : AppCompatActivity() {
             when(it) {
                 LoadingState.isLoading -> binding.progressBar.visibility = View.VISIBLE
                 LoadingState.initial -> binding.progressBar.visibility = View.GONE
+                LoadingState.error -> {
+                    binding.progressBar.visibility = View.GONE
+                    binding.textError.visibility = View.VISIBLE
+                }
             }
         }
         model.mData.observe(this){
-            adapter.setData(it)
+            it?.let {adapter.setData(it)
+                adapter.setData(it)
+            }
         }
     }
 }

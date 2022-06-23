@@ -13,17 +13,23 @@ import javax.inject.Inject
 class MainActivityViewModel @Inject constructor(
     val api: Api
 ): ViewModel() {
-    private suspend fun req() = api.getData(BuildConfig.API_KEY)
-    var mData = MutableLiveData<List<Results>>()
+    private suspend fun requestData() = api.getData(BuildConfig.API_KEY)
+    var mData = MutableLiveData<List<Results>?>()
     var mProgress = MutableLiveData(LoadingState.initial)
     init {
         viewModelScope.launch(Dispatchers.IO) {
             mProgress.postValue(LoadingState.isLoading)
-            mData.postValue(req().body()?.results)
-            mProgress.postValue(LoadingState.initial)
+            val response = requestData()
+            if(response?.code()==200){
+                mData.postValue(response.body()?.results)
+                mProgress.postValue(LoadingState.initial)
+
+            }else{
+                mProgress.postValue(LoadingState.error)
+            }
         }
     }
 }
 enum class LoadingState {
-    isLoading, initial
+    isLoading, initial, error
 }
